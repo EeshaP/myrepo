@@ -34,4 +34,5 @@ head(mpg.2008)
 
 cor(mpg.2008$hwy, mpg.2008$displ)
 m1 <- lm(hwy~displ, data=mpg.2008)
+summary(m1)
 ```
