@@ -1,0 +1,37 @@
+---
+title: "Mpg"
+output: pdf_document
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+
+
+```
+
+##Examine the data
+This is just a piece of writing here about cars. Miles per gallon, I think. Oh wait and there's something about highways too. Wow very interesting. Why can't I just use word tho. It has tables. 
+Although...
+It's kind of fun writing this. Ok bye.
+Wait I gotta write a little more. This R thing is kind of fun right?
+
+
+
+
+
+```{r }
+head(mpg)
+dim(mpg)
+mpg.2008 <- mpg[mpg$year==2008, ]
+head(mpg.2008)
+```
+## is there a relationship btwn engine displacement and highway mileage?
+
+```{r }
+
+cor(mpg.2008$hwy, mpg.2008$displ)
+m1 <- lm(hwy~displ, data=mpg.2008)
+```
